@@ -68,7 +68,7 @@ function App() {
     const n = notes.trim();
 
     if (patternColors.length === 0 && msg === "" && n === "") {
-      return "Add some colors and a bead message to see easy loom instructions here.";
+      return "Add some colors and a bead message to see.";
     }
 
     let text = "";
