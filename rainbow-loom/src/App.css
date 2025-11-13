@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #ffe9ff, #f5f5ff);
+  color: #222;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.card h2 span {
+  font-size: 1.2rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.half {
+  flex: 1 1 260px;
+}
+
+.label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  opacity: 0.7;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.color-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.color-swatch:hover {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.chosen-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  min-height: 32px;
+  padding: 0.3rem 0;
+}
+
+.color-pill {
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fafafa;
+}
+
+.color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.tiny-button {
+  border: none;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  cursor: pointer;
+  background: #f0f0ff;
+}
+
+.tiny-button:hover {
+  background: #e0e0ff;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  border-radius: 999px;
+  border: none;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.actions button.primary {
+  background: linear-gradient(135deg, #ff8ad9, #e5a331);
+}
+
+.actions button.secondary {
+  background: #7a7aed;
+}
+
+.preview-container {
+  border-radius: 12px;
+  padding: 0.8rem;
+  background: repeating-linear-gradient(
+    45deg,
+    #fafafa,
+    #fafafa 10px,
+    #f5f5ff 10px,
+    #f5f5ff 20px
+  );
+  overflow-x: auto;
+}
+
+.bracelet {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0.2rem;
+  min-height: 60px;
+}
+
+.segment {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.segment.band {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.segment.bead {
+  background: #fff;
+  border: 2px solid #444;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.preview-caption {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 0.3rem;
+}
+
+.pill-info {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #ffe9ff, #f5f5ff);
+  color: #222;
+
+  /* Center entire app */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
